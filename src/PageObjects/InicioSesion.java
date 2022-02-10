@@ -57,7 +57,7 @@ public class InicioSesion {
         this.setIngresaCorreo(correo);         
         this.setIngresaClave(clave);
         this.clickBotonLogin();
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 
     }
 

@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 public class Opiniones {
 
     WebDriver driver;
-    By botonVerMas = By.cssSelector("#root > header:nth-child(3) > section > div > div:nth-child(1) > a > button");
+    By botonVerMas = By.xpath("//*[@id=\"root\"]/header[2]/section/div/div[1]/a/button");
     By botonDepartamento = By.cssSelector("#root > header:nth-child(2) > div > a:nth-child(2) > button");
     By botonCrearOpinion = By.cssSelector("#root > header:nth-child(2) > div.container > div:nth-child(1) > div > a > button");
     By ingresarDepartamento = By.cssSelector("#departamento");
@@ -56,20 +56,22 @@ public class Opiniones {
     }
     
     public void registroOpiniones(String departamento, String calificacion, String opinion) throws InterruptedException{
+        
+        
         this.clickBotonverMas();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.clickDepartamento();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.clickCrearOpinion();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.setIngresarDepartamento(departamento);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.setIngresarCalificacion(calificacion);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.setIngresarOpinion(opinion);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         this.clickBotonRegistrarOpinion();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
 }
